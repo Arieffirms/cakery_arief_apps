@@ -1,3 +1,4 @@
+import 'package:cakery_arief/home.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,9 +10,13 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      title: "flutter demo",
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
       debugShowCheckedModeBanner: false,
-      home: Scaffold(),
+      home: const Home(),
     );
   }
 }
