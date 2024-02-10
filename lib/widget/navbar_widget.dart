@@ -8,12 +8,12 @@ class NavbarWiget extends StatelessWidget {
     return BottomAppBar(
       clipBehavior: Clip.antiAlias,
       shape: CircularNotchedRectangle(),
-      notchMargin: 8,
+      notchMargin: 11,
       color: Colors.transparent,
       elevation: 10,
       child: Container(
         height: 50.0,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(25.0),
