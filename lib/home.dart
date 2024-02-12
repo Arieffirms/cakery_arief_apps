@@ -1,3 +1,4 @@
+import 'package:cakery_arief/screen/cakery_page.dart';
 import 'package:cakery_arief/widget/navbar_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -60,7 +61,70 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
       ),
       bottomNavigationBar: const NavbarWiget(),
       body: ListView(
-        padding: EdgeInsets.only(),
+        padding: EdgeInsets.only(left: 20.0),
+        children: [
+          SizedBox(
+            height: 15.0,
+          ),
+          Text(
+            'menu',
+            style: TextStyle(
+              fontFamily: 'Varela',
+              fontSize: 42.0,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          SizedBox(
+            height: 15.0,
+          ),
+          TabBar(
+            controller: _tabController,
+            indicatorColor: Colors.transparent,
+            labelColor: Colors.black,
+            isScrollable: true,
+            labelPadding: EdgeInsets.only(right: 25),
+            unselectedLabelColor: Colors.black12,
+            tabs: [
+              Tab(
+                child: Text(
+                  'Cake Box',
+                  style: TextStyle(
+                    fontFamily: 'Varela',
+                    fontSize: 21.0,
+                  ),
+                ),
+              ),
+              Tab(
+                child: Text(
+                  'Cake Slice',
+                  style: TextStyle(
+                    fontFamily: 'Varela',
+                    fontSize: 21.0,
+                  ),
+                ),
+              ),
+              Tab(
+                child: Text(
+                  'Chiffon',
+                  style: TextStyle(
+                    fontFamily: 'Varela',
+                    fontSize: 21.0,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: MediaQuery.of(context).size.height - 50.0,
+            width: double.infinity,
+            child: TabBarView(
+              controller: _tabController,
+              children: [
+                CookiePage(),
+              ],
+            ),
+          )
+        ],
       ),
     );
   }
