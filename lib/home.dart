@@ -8,7 +8,15 @@ class Home extends StatefulWidget {
   State<Home> createState() => _HomeState();
 }
 
-class _HomeState extends State<Home> {
+class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
+  TabController? _tabController;
+
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(length: 3, vsync: this);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,6 +59,9 @@ class _HomeState extends State<Home> {
         shape: CircleBorder(),
       ),
       bottomNavigationBar: const NavbarWiget(),
+      body: ListView(
+        padding: EdgeInsets.only(),
+      ),
     );
   }
 }
