@@ -26,7 +26,6 @@ final List<Cake> listCakes = [
     isFavorite: true,
     subMenu: 'Cake_box',
   ),
-
   Cake(
     id: 2,
     name: 'Bolu Gula Aren',
@@ -36,7 +35,7 @@ final List<Cake> listCakes = [
     subMenu: 'cake_box',
   ),
   Cake(
-    id: 5,
+    id: 3,
     name: 'Brownies Keju',
     price: '104.000',
     imageUrl: 'assets/box5.jpeg',
@@ -44,7 +43,7 @@ final List<Cake> listCakes = [
     subMenu: 'cake_box',
   ),
   Cake(
-    id: 6,
+    id: 4,
     name: 'Brownies Almond',
     price: '94.000',
     imageUrl: 'assets/box6.jpeg',
@@ -52,7 +51,7 @@ final List<Cake> listCakes = [
     subMenu: 'cake_box',
   ),
   Cake(
-    id: 3,
+    id: 5,
     name: 'Coffee Cake Pudding',
     price: '99.000',
     imageUrl: 'assets/box3.jpeg',
@@ -60,7 +59,7 @@ final List<Cake> listCakes = [
     subMenu: 'cake_box',
   ),
   Cake(
-    id: 4,
+    id: 6,
     name: 'Puding Cake Tiramisu',
     price: '99.000',
     imageUrl: 'assets/box4.jpeg',

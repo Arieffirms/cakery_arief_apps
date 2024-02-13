@@ -121,6 +121,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
               controller: _tabController,
               children: [
                 CookiePage(),
+                CookiePage(),
               ],
             ),
           )

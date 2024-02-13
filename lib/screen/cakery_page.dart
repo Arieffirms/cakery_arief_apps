@@ -1,4 +1,5 @@
 import 'package:cakery_arief/data/cake.dart';
+import 'package:cakery_arief/screen/cake_detail.dart';
 import 'package:flutter/material.dart';
 
 class CookiePage extends StatelessWidget {
@@ -45,7 +46,19 @@ class CookiePage extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.all(5),
       child: InkWell(
-        onTap: () {},
+        onTap: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) {
+                return CakeryDetail(
+                  assetPath: cake.imageUrl,
+                  cookieprice: cake.price,
+                  cookiename: cake.name,
+                );
+              },
+            ),
+          );
+        },
         child: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15.0),
